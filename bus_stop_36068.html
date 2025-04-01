@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <script src="ajax2.js"></script>
+		<title>[下坡角]公車動態資訊</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="shortcut icon" href="#">
+		<script language="JavaScript">
+			var TTEMap = {'0':'進站中','':'未發車','-1':'未發車','-2':'交管不停','-3':'末班已過','-4':'今日未營運'};
+			var Timer = null;
+		    var divIndex=0;
+
+	    	function switchDiv() {
+	    		if (document.getElementById("SDIV"+divIndex))
+	    			{
+	    			if (document.getElementById("IgnoreCheck"+divIndex))
+	    				if (document.getElementById("IgnoreCheck"+divIndex).checked)
+	    					localStorage.setItem("PDANewsAlertIgnoew"+document.getElementById("IgnoreCheck"+divIndex).value, "Yes");
+	    			document.getElementById("SDIV"+divIndex).style.display='none';
+	    			};
+	    		divIndex++;
+	    		while (document.getElementById("IgnoreCheck"+divIndex) 
+	    				&& localStorage.getItem("PDANewsAlertIgnoew"+document.getElementById("IgnoreCheck"+divIndex).value)=="Yes")
+	    		{divIndex++;};
+	    		
+	    		if (document.getElementById("SDIV"+divIndex))
+	    			document.getElementById("SDIV"+divIndex).style.display='';
+	    	}
+			
+	        function queryDyna() {
+	        	if (Timer!=null) clearTimeout(Timer);
+	        	http('GET', 'StopLocationDyna?stoplocationid=36068', processDyna);
+	        }
+	        
+	    	function processDyna(data) {
+				if (data.UpdateTime)
+					{
+					document.getElementById("spnUpdateTime").innerHTML= data.UpdateTime.substring(11);
+					
+					for (var i=0;i<data.Stop.length;i++)
+						{
+						if (data.Stop[i].n1==null) continue;
+						var arrN1 = data.Stop[i].n1.split(',');
+						var tteTD = document.getElementById("tte"+arrN1[1]);
+						var tteHTML="";
+						
+						if (tteTD)
+						   {
+								if (TTEMap.hasOwnProperty(arrN1[7]))
+									tteHTML= TTEMap[arrN1[7]];
+								else
+										{
+							 			var tte=parseInt(arrN1[7],10);
+							 			if (tte>0 && tte<180)
+							 				tteHTML= "將到站";
+							 			else
+							 				tteHTML= Math.floor(tte/60)+"分";
+										};
+								
+								if (tteTD.getAttribute("data-deptimen1")=="Y")
+									{
+									
+											if (arrN1[3].indexOf("&#x3a;")>-1) if (arrN1[7]=="-1" || parseInt(arrN1[7],10)>5940) tteHTML=arrN1[3]+" 發車"; 
+									
+									};
+										
+								tteTD.innerHTML=tteHTML;
+						   };
+						};
+					};
+				Timer=setTimeout(queryDyna,60000);
+	    	}
+		</script>
+	</head>
+	<body onload="switchDiv();queryDyna();">
+		<center>
+		<div id="SDIV1" style="">
+
+		<table class="formattable1">
+    	
+        	<tbody><tr>
+	            <th class="title1"><a href="index.jsp" class="title1">行動查詢系統</a></th>
+        	</tr>
+    	
+			<tr>
+				<th class="title2"><a href="routelist.jsp" class="title2">查詢公車動態資訊</a></th>
+			</tr>
+			<tr>
+				<th class="title4">下坡角<br><span class="updatetime">(更新時間：<span id="spnUpdateTime"></span>&nbsp;<input type="button" value="立刻更新" onclick="queryDyna();">)</span></th>
+			</tr>
+		</tbody></table>
+    	
+			<marquee scrollamount="4" class="marqueetd" width="100%">2025雙北世壯運在臺北，5/17-5/30一起為選手加油!</marquee>
+    	
+		<table class="formattable1">
+			<tbody><tr>
+				<td width="100%" valign="top">
+				    <table border="0" width="100%">
+				      <tbody><tr>
+                        <th class="ttegotitle">路線</th>
+                        <th class="ttegotitle">站牌</th>
+                        <th class="ttegotitle">去返程</th>
+                        <th class="ttegotitle">預估到站</th>
+                      </tr>
+                      <tr class="ttego1"><td><a href="route.jsp?rid=10491">637</a></td><td><a href="stop.jsp?from=sl&amp;sid=37170">下坡角</a></td><td align="center">去程</td><td align="center" id="tte37170" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=10492">638</a></td><td><a href="stop.jsp?from=sl&amp;sid=37281">下坡角</a></td><td align="center">去程</td><td align="center" id="tte37281" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16706">758</a></td><td><a href="stop.jsp?from=sl&amp;sid=151536">下坡角</a></td><td align="center">去程</td><td align="center" id="tte151536" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16571">797</a></td><td><a href="stop.jsp?from=sl&amp;sid=137219">下坡角</a></td><td align="center">去程</td><td align="center" id="tte137219" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16594">801</a></td><td><a href="stop.jsp?from=sl&amp;sid=139312">下坡角</a></td><td align="center">去程</td><td align="center" id="tte139312" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16515">858</a></td><td><a href="stop.jsp?from=sl&amp;sid=131376">下坡角</a></td><td align="center">返程</td><td align="center" id="tte131376" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16659">880</a></td><td><a href="stop.jsp?from=sl&amp;sid=145479">下坡角</a></td><td align="center">返程</td><td align="center" id="tte145479" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16660">883</a></td><td><a href="stop.jsp?from=sl&amp;sid=145858">下坡角</a></td><td align="center">去程</td><td align="center" id="tte145858" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16840">F211</a></td><td><a href="stop.jsp?from=sl&amp;sid=158210">下坡角</a></td><td align="center">去程</td><td align="center" id="tte158210" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16838">F217</a></td><td><a href="stop.jsp?from=sl&amp;sid=158179">下坡角</a></td><td align="center">返程</td><td align="center" id="tte158179" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16839">F218</a></td><td><a href="stop.jsp?from=sl&amp;sid=158202">下坡角</a></td><td align="center">返程</td><td align="center" id="tte158202" data-deptimen1="Y"></td></tr>
+
+                    </tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		</div>
+
+	
+</center><div id="JSMX_loading"></div></body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <script src="ajax2.js"></script>
+		<title>[泰山郵局]公車動態資訊</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="shortcut icon" href="#">
+		<script language="JavaScript">
+			var TTEMap = {'0':'進站中','':'未發車','-1':'未發車','-2':'交管不停','-3':'末班已過','-4':'今日未營運'};
+			var Timer = null;
+		    var divIndex=0;
+
+	    	function switchDiv() {
+	    		if (document.getElementById("SDIV"+divIndex))
+	    			{
+	    			if (document.getElementById("IgnoreCheck"+divIndex))
+	    				if (document.getElementById("IgnoreCheck"+divIndex).checked)
+	    					localStorage.setItem("PDANewsAlertIgnoew"+document.getElementById("IgnoreCheck"+divIndex).value, "Yes");
+	    			document.getElementById("SDIV"+divIndex).style.display='none';
+	    			};
+	    		divIndex++;
+	    		while (document.getElementById("IgnoreCheck"+divIndex) 
+	    				&& localStorage.getItem("PDANewsAlertIgnoew"+document.getElementById("IgnoreCheck"+divIndex).value)=="Yes")
+	    		{divIndex++;};
+	    		
+	    		if (document.getElementById("SDIV"+divIndex))
+	    			document.getElementById("SDIV"+divIndex).style.display='';
+	    	}
+			
+	        function queryDyna() {
+	        	if (Timer!=null) clearTimeout(Timer);
+	        	http('GET', 'StopLocationDyna?stoplocationid=36060', processDyna);
+	        }
+	        
+	    	function processDyna(data) {
+				if (data.UpdateTime)
+					{
+					document.getElementById("spnUpdateTime").innerHTML= data.UpdateTime.substring(11);
+					
+					for (var i=0;i<data.Stop.length;i++)
+						{
+						if (data.Stop[i].n1==null) continue;
+						var arrN1 = data.Stop[i].n1.split(',');
+						var tteTD = document.getElementById("tte"+arrN1[1]);
+						var tteHTML="";
+						
+						if (tteTD)
+						   {
+								if (TTEMap.hasOwnProperty(arrN1[7]))
+									tteHTML= TTEMap[arrN1[7]];
+								else
+										{
+							 			var tte=parseInt(arrN1[7],10);
+							 			if (tte>0 && tte<180)
+							 				tteHTML= "將到站";
+							 			else
+							 				tteHTML= Math.floor(tte/60)+"分";
+										};
+								
+								if (tteTD.getAttribute("data-deptimen1")=="Y")
+									{
+									
+											if (arrN1[3].indexOf("&#x3a;")>-1) if (arrN1[7]=="-1" || parseInt(arrN1[7],10)>5940) tteHTML=arrN1[3]+" 發車"; 
+									
+									};
+										
+								tteTD.innerHTML=tteHTML;
+						   };
+						};
+					};
+				Timer=setTimeout(queryDyna,60000);
+	    	}
+		</script>
+	</head>
+	<body onload="switchDiv();queryDyna();">
+		<center>
+		<div id="SDIV1" style="">
+
+		<table class="formattable1">
+    	
+        	<tbody><tr>
+	            <th class="title1"><a href="index.jsp" class="title1">行動查詢系統</a></th>
+        	</tr>
+    	
+			<tr>
+				<th class="title2"><a href="routelist.jsp" class="title2">查詢公車動態資訊</a></th>
+			</tr>
+			<tr>
+				<th class="title4">泰山郵局<br><span class="updatetime">(更新時間：<span id="spnUpdateTime"></span>&nbsp;<input type="button" value="立刻更新" onclick="queryDyna();">)</span></th>
+			</tr>
+		</tbody></table>
+    	
+			<marquee scrollamount="4" class="marqueetd" width="100%">2025雙北世壯運在臺北，5/17-5/30一起為選手加油!</marquee>
+    	
+		<table class="formattable1">
+			<tbody><tr>
+				<td width="100%" valign="top">
+				    <table border="0" width="100%">
+				      <tbody><tr>
+                        <th class="ttegotitle">路線</th>
+                        <th class="ttegotitle">站牌</th>
+                        <th class="ttegotitle">去返程</th>
+                        <th class="ttegotitle">預估到站</th>
+                      </tr>
+                      <tr class="ttego1"><td><a href="route.jsp?rid=10441">508</a></td><td><a href="stop.jsp?from=sl&amp;sid=29374">泰山郵局</a></td><td align="center">去程</td><td align="center" id="tte29374" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=10491">637</a></td><td><a href="stop.jsp?from=sl&amp;sid=37229">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte37229" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=10492">638</a></td><td><a href="stop.jsp?from=sl&amp;sid=37362">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte37362" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=17868">638副</a></td><td><a href="stop.jsp?from=sl&amp;sid=194636">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte194636" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16706">758</a></td><td><a href="stop.jsp?from=sl&amp;sid=151678">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte151678" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16692">783</a></td><td><a href="stop.jsp?from=sl&amp;sid=150107">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte150107" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16571">797</a></td><td><a href="stop.jsp?from=sl&amp;sid=148663">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte148663" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16594">801</a></td><td><a href="stop.jsp?from=sl&amp;sid=139392">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte139392" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16595">803</a></td><td><a href="stop.jsp?from=sl&amp;sid=139491">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte139491" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=17524">805</a></td><td><a href="stop.jsp?from=sl&amp;sid=179055">泰山郵局</a></td><td align="center">去程</td><td align="center" id="tte179055" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=17526">813</a></td><td><a href="stop.jsp?from=sl&amp;sid=179257">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte179257" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16270">838</a></td><td><a href="stop.jsp?from=sl&amp;sid=113730">泰山郵局</a></td><td align="center">去程</td><td align="center" id="tte113730" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16659">880</a></td><td><a href="stop.jsp?from=sl&amp;sid=147171">泰山郵局</a></td><td align="center">去程</td><td align="center" id="tte147171" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16660">883</a></td><td><a href="stop.jsp?from=sl&amp;sid=147274">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte147274" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=17806">899</a></td><td><a href="stop.jsp?from=sl&amp;sid=191557">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte191557" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16672">938</a></td><td><a href="stop.jsp?from=sl&amp;sid=147808">泰山郵局</a></td><td align="center">返程</td><td align="center" id="tte147808" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=17559">F212副</a></td><td><a href="stop.jsp?from=sl&amp;sid=191677">泰山郵局</a></td><td align="center">去程</td><td align="center" id="tte191677" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16620">橘10</a></td><td><a href="stop.jsp?from=sl&amp;sid=141186">泰山郵局</a></td><td align="center">去程</td><td align="center" id="tte141186" data-deptimen1="Y"></td></tr>
+
+                    </tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		</div>
+
+	
+</center><div id="JSMX_loading"></div></body></html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <script src="ajax2.js"></script>
+		<title>[明志國小]公車動態資訊</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="shortcut icon" href="#">
+		<script language="JavaScript">
+			var TTEMap = {'0':'進站中','':'未發車','-1':'未發車','-2':'交管不停','-3':'末班已過','-4':'今日未營運'};
+			var Timer = null;
+		    var divIndex=0;
+
+	    	function switchDiv() {
+	    		if (document.getElementById("SDIV"+divIndex))
+	    			{
+	    			if (document.getElementById("IgnoreCheck"+divIndex))
+	    				if (document.getElementById("IgnoreCheck"+divIndex).checked)
+	    					localStorage.setItem("PDANewsAlertIgnoew"+document.getElementById("IgnoreCheck"+divIndex).value, "Yes");
+	    			document.getElementById("SDIV"+divIndex).style.display='none';
+	    			};
+	    		divIndex++;
+	    		while (document.getElementById("IgnoreCheck"+divIndex) 
+	    				&& localStorage.getItem("PDANewsAlertIgnoew"+document.getElementById("IgnoreCheck"+divIndex).value)=="Yes")
+	    		{divIndex++;};
+	    		
+	    		if (document.getElementById("SDIV"+divIndex))
+	    			document.getElementById("SDIV"+divIndex).style.display='';
+	    	}
+			
+	        function queryDyna() {
+	        	if (Timer!=null) clearTimeout(Timer);
+	        	http('GET', 'StopLocationDyna?stoplocationid=36065', processDyna);
+	        }
+	        
+	    	function processDyna(data) {
+				if (data.UpdateTime)
+					{
+					document.getElementById("spnUpdateTime").innerHTML= data.UpdateTime.substring(11);
+					
+					for (var i=0;i<data.Stop.length;i++)
+						{
+						if (data.Stop[i].n1==null) continue;
+						var arrN1 = data.Stop[i].n1.split(',');
+						var tteTD = document.getElementById("tte"+arrN1[1]);
+						var tteHTML="";
+						
+						if (tteTD)
+						   {
+								if (TTEMap.hasOwnProperty(arrN1[7]))
+									tteHTML= TTEMap[arrN1[7]];
+								else
+										{
+							 			var tte=parseInt(arrN1[7],10);
+							 			if (tte>0 && tte<180)
+							 				tteHTML= "將到站";
+							 			else
+							 				tteHTML= Math.floor(tte/60)+"分";
+										};
+								
+								if (tteTD.getAttribute("data-deptimen1")=="Y")
+									{
+									
+											if (arrN1[3].indexOf("&#x3a;")>-1) if (arrN1[7]=="-1" || parseInt(arrN1[7],10)>5940) tteHTML=arrN1[3]+" 發車"; 
+									
+									};
+										
+								tteTD.innerHTML=tteHTML;
+						   };
+						};
+					};
+				Timer=setTimeout(queryDyna,60000);
+	    	}
+		</script>
+	</head>
+	<body onload="switchDiv();queryDyna();">
+		<center>
+		<div id="SDIV1" style="">
+
+		<table class="formattable1">
+    	
+        	<tbody><tr>
+	            <th class="title1"><a href="index.jsp" class="title1">行動查詢系統</a></th>
+        	</tr>
+    	
+			<tr>
+				<th class="title2"><a href="routelist.jsp" class="title2">查詢公車動態資訊</a></th>
+			</tr>
+			<tr>
+				<th class="title4">明志國小<br><span class="updatetime">(更新時間：<span id="spnUpdateTime"></span>&nbsp;<input type="button" value="立刻更新" onclick="queryDyna();">)</span></th>
+			</tr>
+		</tbody></table>
+    	
+			<marquee scrollamount="4" class="marqueetd" width="100%">2025雙北世壯運在臺北，5/17-5/30一起為選手加油!</marquee>
+    	
+		<table class="formattable1">
+			<tbody><tr>
+				<td width="100%" valign="top">
+				    <table border="0" width="100%">
+				      <tbody><tr>
+                        <th class="ttegotitle">路線</th>
+                        <th class="ttegotitle">站牌</th>
+                        <th class="ttegotitle">去返程</th>
+                        <th class="ttegotitle">預估到站</th>
+                      </tr>
+                      <tr class="ttego1"><td><a href="route.jsp?rid=10491">637</a></td><td><a href="stop.jsp?from=sl&amp;sid=37166">明志國小</a></td><td align="center">去程</td><td align="center" id="tte37166" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=10492">638</a></td><td><a href="stop.jsp?from=sl&amp;sid=37277">明志國小</a></td><td align="center">去程</td><td align="center" id="tte37277" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=17868">638副</a></td><td><a href="stop.jsp?from=sl&amp;sid=194613">明志國小</a></td><td align="center">去程</td><td align="center" id="tte194613" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16706">758</a></td><td><a href="stop.jsp?from=sl&amp;sid=151532">明志國小</a></td><td align="center">去程</td><td align="center" id="tte151532" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16571">797</a></td><td><a href="stop.jsp?from=sl&amp;sid=137215">明志國小</a></td><td align="center">去程</td><td align="center" id="tte137215" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16594">801</a></td><td><a href="stop.jsp?from=sl&amp;sid=139308">明志國小</a></td><td align="center">去程</td><td align="center" id="tte139308" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16515">858</a></td><td><a href="stop.jsp?from=sl&amp;sid=131372">明志國小</a></td><td align="center">返程</td><td align="center" id="tte131372" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16659">880</a></td><td><a href="stop.jsp?from=sl&amp;sid=145475">明志國小</a></td><td align="center">返程</td><td align="center" id="tte145475" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16660">883</a></td><td><a href="stop.jsp?from=sl&amp;sid=145854">明志國小</a></td><td align="center">去程</td><td align="center" id="tte145854" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=17625">898</a></td><td><a href="stop.jsp?from=sl&amp;sid=183978">明志國小</a></td><td align="center">返程</td><td align="center" id="tte183978" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16840">F211</a></td><td><a href="stop.jsp?from=sl&amp;sid=158206">明志國小</a></td><td align="center">去程</td><td align="center" id="tte158206" data-deptimen1="Y"></td></tr>
+<tr class="ttego2"><td><a href="route.jsp?rid=16838">F217</a></td><td><a href="stop.jsp?from=sl&amp;sid=158176">明志國小</a></td><td align="center">返程</td><td align="center" id="tte158176" data-deptimen1="Y"></td></tr>
+<tr class="ttego1"><td><a href="route.jsp?rid=16839">F218</a></td><td><a href="stop.jsp?from=sl&amp;sid=158199">明志國小</a></td><td align="center">返程</td><td align="center" id="tte158199" data-deptimen1="Y"></td></tr>
+
+                    </tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+		</div>
+
+	
+</center><div id="JSMX_loading"></div></body></html>
