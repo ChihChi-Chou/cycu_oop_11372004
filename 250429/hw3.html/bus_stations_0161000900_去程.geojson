@@ -1,0 +1,1211 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.49262,
+          25.14506
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "1",
+        "stop_name": "貴子坑水土保持園區",
+        "stop_id": "1125200700",
+        "latitude": 25.14506,
+        "longitude": 121.49262
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4938266,
+          25.145288
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "2",
+        "stop_name": "秀山里",
+        "stop_id": "1125200320",
+        "latitude": 25.145288,
+        "longitude": 121.4938266
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.497011,
+          25.144571
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "3",
+        "stop_name": "慈航寺",
+        "stop_id": "1125200840",
+        "latitude": 25.144571,
+        "longitude": 121.497011
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4980051,
+          25.143537
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "4",
+        "stop_name": "國泰新村",
+        "stop_id": "1125200540",
+        "latitude": 25.143537,
+        "longitude": 121.4980051
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4987552,
+          25.142065
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "5",
+        "stop_name": "中和里",
+        "stop_id": "1125200040",
+        "latitude": 25.142065,
+        "longitude": 121.4987552
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.500142,
+          25.140425
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "6",
+        "stop_name": "復興中學",
+        "stop_id": "1125200640",
+        "latitude": 25.140425,
+        "longitude": 121.500142
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5015207,
+          25.139157
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "7",
+        "stop_name": "中和街",
+        "stop_id": "1125200140",
+        "latitude": 25.139157,
+        "longitude": 121.5015207
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.502937,
+          25.137791
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "8",
+        "stop_name": "新北投",
+        "stop_id": "1125200940",
+        "latitude": 25.137791,
+        "longitude": 121.502937
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5041244,
+          25.136348
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "9",
+        "stop_name": "北投公園",
+        "stop_id": "1124701040",
+        "latitude": 25.136348,
+        "longitude": 121.5041244
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5023587,
+          25.134513
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "10",
+        "stop_name": "第一銀行",
+        "stop_id": "1124600540",
+        "latitude": 25.134513,
+        "longitude": 121.5023587
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.50136,
+          25.133615
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "11",
+        "stop_name": "北投國小",
+        "stop_id": "1126300300",
+        "latitude": 25.133615,
+        "longitude": 121.50136
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4978915,
+          25.135807
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "12",
+        "stop_name": "大業中央北路口",
+        "stop_id": "1126300060",
+        "latitude": 25.135807,
+        "longitude": 121.4978915
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4968066,
+          25.135718
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "13",
+        "stop_name": "幼華高中(大業)",
+        "stop_id": "1126800040",
+        "latitude": 25.135718,
+        "longitude": 121.4968066
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.495841,
+          25.13174
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "14",
+        "stop_name": "大業路(捷運北投站)",
+        "stop_id": "1126800640",
+        "latitude": 25.13174,
+        "longitude": 121.495841
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.49669,
+          25.12976
+        ]
+      },
+      "properties": {
+        "stop_time": "尚未發車",
+        "stop_number": "15",
+        "stop_name": "大業路(大興街口)",
+        "stop_id": "1126800540",
+        "latitude": 25.12976,
+        "longitude": 121.49669
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4978596,
+          25.127225
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "16",
+        "stop_name": "鳳甲美術館",
+        "stop_id": "1126800840",
+        "latitude": 25.127225,
+        "longitude": 121.4978596
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.499222,
+          25.122429
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "17",
+        "stop_name": "大業路(農禪寺)",
+        "stop_id": "1126800440",
+        "latitude": 25.122429,
+        "longitude": 121.499222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.501973,
+          25.118907
+        ]
+      },
+      "properties": {
+        "stop_time": "3分鐘",
+        "stop_number": "18",
+        "stop_name": "承德公館路口",
+        "stop_id": "1126200430",
+        "latitude": 25.118907,
+        "longitude": 121.501973
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.503568,
+          25.117433
+        ]
+      },
+      "properties": {
+        "stop_time": "3分鐘",
+        "stop_number": "19",
+        "stop_name": "立農國小",
+        "stop_id": "1126200240",
+        "latitude": 25.117433,
+        "longitude": 121.503568
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5064388,
+          25.114726
+        ]
+      },
+      "properties": {
+        "stop_time": "4分鐘",
+        "stop_number": "20",
+        "stop_name": "實踐街口",
+        "stop_id": "1126200640",
+        "latitude": 25.114726,
+        "longitude": 121.5064388
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.508727,
+          25.112706
+        ]
+      },
+      "properties": {
+        "stop_time": "5分鐘",
+        "stop_number": "21",
+        "stop_name": "承德路七段",
+        "stop_id": "1126200540",
+        "latitude": 25.112706,
+        "longitude": 121.508727
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.512347,
+          25.109536
+        ]
+      },
+      "properties": {
+        "stop_time": "8分鐘",
+        "stop_number": "22",
+        "stop_name": "石牌",
+        "stop_id": "1128700240",
+        "latitude": 25.109536,
+        "longitude": 121.512347
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5139733,
+          25.108034
+        ]
+      },
+      "properties": {
+        "stop_time": "8分鐘",
+        "stop_number": "23",
+        "stop_name": "文林國小",
+        "stop_id": "1128700140",
+        "latitude": 25.108034,
+        "longitude": 121.5139733
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.517803,
+          25.105059
+        ]
+      },
+      "properties": {
+        "stop_time": "10分鐘",
+        "stop_number": "24",
+        "stop_name": "中正高中",
+        "stop_id": "1128700040",
+        "latitude": 25.105059,
+        "longitude": 121.517803
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5204736,
+          25.102263
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "25",
+        "stop_name": "捷運芝山站(戲曲中心)",
+        "stop_id": "1115900240",
+        "latitude": 25.102263,
+        "longitude": 121.5204736
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5223075,
+          25.100849
+        ]
+      },
+      "properties": {
+        "stop_time": "3分鐘",
+        "stop_number": "26",
+        "stop_name": "捷運芝山站一",
+        "stop_id": "1115900340",
+        "latitude": 25.100849,
+        "longitude": 121.5223075
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5242793,
+          25.095911
+        ]
+      },
+      "properties": {
+        "stop_time": "5分鐘",
+        "stop_number": "27",
+        "stop_name": "士林",
+        "stop_id": "1115900040",
+        "latitude": 25.095911,
+        "longitude": 121.5242793
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.526725,
+          25.090999
+        ]
+      },
+      "properties": {
+        "stop_time": "8分鐘",
+        "stop_number": "28",
+        "stop_name": "小北街",
+        "stop_id": "1116300541",
+        "latitude": 25.090999,
+        "longitude": 121.526725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.524748,
+          25.084849
+        ]
+      },
+      "properties": {
+        "stop_time": "11分鐘",
+        "stop_number": "29",
+        "stop_name": "捷運劍潭站(北藝中心)",
+        "stop_id": "1114100440",
+        "latitude": 25.084849,
+        "longitude": 121.524748
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5233264,
+          25.083468
+        ]
+      },
+      "properties": {
+        "stop_time": "13分鐘",
+        "stop_number": "30",
+        "stop_name": "圓山皇宮大廈",
+        "stop_id": "1116600140",
+        "latitude": 25.083468,
+        "longitude": 121.5233264
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5223096,
+          25.081056
+        ]
+      },
+      "properties": {
+        "stop_time": "14分鐘",
+        "stop_number": "31",
+        "stop_name": "劍潭國小",
+        "stop_id": "1116600240",
+        "latitude": 25.081056,
+        "longitude": 121.5223096
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5191524,
+          25.07344
+        ]
+      },
+      "properties": {
+        "stop_time": "16分鐘",
+        "stop_number": "32",
+        "stop_name": "明倫高中",
+        "stop_id": "1036700240",
+        "latitude": 25.07344,
+        "longitude": 121.5191524
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5183341,
+          25.071066
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "33",
+        "stop_name": "庫倫街口",
+        "stop_id": "1036600040",
+        "latitude": 25.071066,
+        "longitude": 121.5183341
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5182673,
+          25.067913
+        ]
+      },
+      "properties": {
+        "stop_time": "3分鐘",
+        "stop_number": "34",
+        "stop_name": "民族承德路口",
+        "stop_id": "1036500040",
+        "latitude": 25.067913,
+        "longitude": 121.5182673
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5181,
+          25.064874
+        ]
+      },
+      "properties": {
+        "stop_time": "4分鐘",
+        "stop_number": "35",
+        "stop_name": "大同國小",
+        "stop_id": "1036300040",
+        "latitude": 25.064874,
+        "longitude": 121.5181
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.518152,
+          25.062226
+        ]
+      },
+      "properties": {
+        "stop_time": "6分鐘",
+        "stop_number": "36",
+        "stop_name": "成淵高中",
+        "stop_id": "1036000040",
+        "latitude": 25.062226,
+        "longitude": 121.518152
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5179896,
+          25.056725
+        ]
+      },
+      "properties": {
+        "stop_time": "8分鐘",
+        "stop_number": "37",
+        "stop_name": "民生西路口",
+        "stop_id": "1035300140",
+        "latitude": 25.056725,
+        "longitude": 121.5179896
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5196749,
+          25.05271
+        ]
+      },
+      "properties": {
+        "stop_time": "11分鐘",
+        "stop_number": "38",
+        "stop_name": "捷運中山站(志仁高中)",
+        "stop_id": "1035200120",
+        "latitude": 25.05271,
+        "longitude": 121.5196749
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5250604,
+          25.052069
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "39",
+        "stop_name": "南京林森路口",
+        "stop_id": "1045400120",
+        "latitude": 25.052069,
+        "longitude": 121.5250604
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.529855,
+          25.052007
+        ]
+      },
+      "properties": {
+        "stop_time": "4分鐘",
+        "stop_number": "40",
+        "stop_name": "南京吉林路口",
+        "stop_id": "1045700220",
+        "latitude": 25.052007,
+        "longitude": 121.529855
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5327305,
+          25.051969
+        ]
+      },
+      "properties": {
+        "stop_time": "5分鐘",
+        "stop_number": "41",
+        "stop_name": "捷運松江南京站",
+        "stop_id": "1045700420",
+        "latitude": 25.051969,
+        "longitude": 121.5327305
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5362725,
+          25.051938
+        ]
+      },
+      "properties": {
+        "stop_time": "7分鐘",
+        "stop_number": "42",
+        "stop_name": "南京建國路口",
+        "stop_id": "1048700320",
+        "latitude": 25.051938,
+        "longitude": 121.5362725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5401689,
+          25.051888
+        ]
+      },
+      "properties": {
+        "stop_time": "8分鐘",
+        "stop_number": "43",
+        "stop_name": "南京龍江路口",
+        "stop_id": "1048700420",
+        "latitude": 25.051888,
+        "longitude": 121.5401689
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435614,
+          25.051804
+        ]
+      },
+      "properties": {
+        "stop_time": "10分鐘",
+        "stop_number": "44",
+        "stop_name": "捷運南京復興站",
+        "stop_id": "1055000120",
+        "latitude": 25.051804,
+        "longitude": 121.5435614
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5483534,
+          25.051703
+        ]
+      },
+      "properties": {
+        "stop_time": "11分鐘",
+        "stop_number": "45",
+        "stop_name": "南京敦化路口(小巨蛋)",
+        "stop_id": "1055100220",
+        "latitude": 25.051703,
+        "longitude": 121.5483534
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5547373,
+          25.051548
+        ]
+      },
+      "properties": {
+        "stop_time": "13分鐘",
+        "stop_number": "46",
+        "stop_name": "南京寧安街口",
+        "stop_id": "1058000020",
+        "latitude": 25.051548,
+        "longitude": 121.5547373
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.55774,
+          25.04937
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "47",
+        "stop_name": "博仁醫院",
+        "stop_id": "1056000040",
+        "latitude": 25.04937,
+        "longitude": 121.55774
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5577342,
+          25.04762
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "48",
+        "stop_name": "臺北市區監理所(光復)",
+        "stop_id": "1055500040",
+        "latitude": 25.04762,
+        "longitude": 121.5577342
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.557568,
+          25.042558
+        ]
+      },
+      "properties": {
+        "stop_time": "3分鐘",
+        "stop_number": "49",
+        "stop_name": "捷運國父紀念館站(光復)",
+        "stop_id": "1069400140",
+        "latitude": 25.042558,
+        "longitude": 121.557568
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5574996,
+          25.039009
+        ]
+      },
+      "properties": {
+        "stop_time": "5分鐘",
+        "stop_number": "50",
+        "stop_name": "國父紀念館",
+        "stop_id": "1069400040",
+        "latitude": 25.039009,
+        "longitude": 121.5574996
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.55745,
+          25.03669
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "51",
+        "stop_name": "市民住宅",
+        "stop_id": "1069500140",
+        "latitude": 25.03669,
+        "longitude": 121.55745
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5573365,
+          25.034098
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "52",
+        "stop_name": "三張犁",
+        "stop_id": "1069500040",
+        "latitude": 25.034098,
+        "longitude": 121.5573365
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.56127,
+          25.031446
+        ]
+      },
+      "properties": {
+        "stop_time": "4分鐘",
+        "stop_number": "53",
+        "stop_name": "世貿中心(莊敬)",
+        "stop_id": "1104900140",
+        "latitude": 25.031446,
+        "longitude": 121.56127
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5624103,
+          25.02923
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "54",
+        "stop_name": "景新里",
+        "stop_id": "1104900440",
+        "latitude": 25.02923,
+        "longitude": 121.5624103
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5632643,
+          25.028273
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "55",
+        "stop_name": "臺北醫學大學",
+        "stop_id": "1105000340",
+        "latitude": 25.028273,
+        "longitude": 121.5632643
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.565724,
+          25.027402
+        ]
+      },
+      "properties": {
+        "stop_time": "3分鐘",
+        "stop_number": "56",
+        "stop_name": "信義國中(莊敬)",
+        "stop_id": "1105000240",
+        "latitude": 25.027402,
+        "longitude": 121.565724
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.568554,
+          25.026231
+        ]
+      },
+      "properties": {
+        "stop_time": "5分鐘",
+        "stop_number": "57",
+        "stop_name": "吳興國小(松仁)",
+        "stop_id": "1104600040",
+        "latitude": 25.026231,
+        "longitude": 121.568554
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.569585,
+          25.024432
+        ]
+      },
+      "properties": {
+        "stop_time": "6分鐘",
+        "stop_number": "58",
+        "stop_name": "松仁路",
+        "stop_id": "1104600240",
+        "latitude": 25.024432,
+        "longitude": 121.569585
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5695997,
+          25.02453
+        ]
+      },
+      "properties": {
+        "stop_time": "6分鐘",
+        "stop_number": "59",
+        "stop_name": "松仁路",
+        "stop_id": "1104600200",
+        "latitude": 25.02453,
+        "longitude": 121.5695997
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.568628,
+          25.026234
+        ]
+      },
+      "properties": {
+        "stop_time": "9分鐘",
+        "stop_number": "60",
+        "stop_name": "吳興國小(松仁)",
+        "stop_id": "1104600000",
+        "latitude": 25.026234,
+        "longitude": 121.568628
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.568464,
+          25.02881
+        ]
+      },
+      "properties": {
+        "stop_time": "10分鐘",
+        "stop_number": "61",
+        "stop_name": "信義國中(松仁)",
+        "stop_id": "1105900000",
+        "latitude": 25.02881,
+        "longitude": 121.568464
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.56839,
+          25.03124
+        ]
+      },
+      "properties": {
+        "stop_time": "11分鐘",
+        "stop_number": "62",
+        "stop_name": "松平路口",
+        "stop_id": "1105800300",
+        "latitude": 25.03124,
+        "longitude": 121.56839
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5684464,
+          25.03369
+        ]
+      },
+      "properties": {
+        "stop_time": "13分鐘",
+        "stop_number": "63",
+        "stop_name": "信義松仁路口(松仁)",
+        "stop_id": "1105800400",
+        "latitude": 25.03369,
+        "longitude": 121.5684464
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5666401,
+          25.035881
+        ]
+      },
+      "properties": {
+        "stop_time": "15分鐘",
+        "stop_number": "64",
+        "stop_name": "松壽路口",
+        "stop_id": "1105100460",
+        "latitude": 25.035881,
+        "longitude": 121.5666401
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5646562,
+          25.035907
+        ]
+      },
+      "properties": {
+        "stop_time": "16分鐘",
+        "stop_number": "65",
+        "stop_name": "市政府(松壽)",
+        "stop_id": "1105100360",
+        "latitude": 25.035907,
+        "longitude": 121.5646562
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5636251,
+          25.038366
+        ]
+      },
+      "properties": {
+        "stop_time": "18分鐘",
+        "stop_number": "66",
+        "stop_name": "市政府(市府)",
+        "stop_id": "1100800100",
+        "latitude": 25.038366,
+        "longitude": 121.5636251
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5653493,
+          25.041057
+        ]
+      },
+      "properties": {
+        "stop_time": "進站中",
+        "stop_number": "67",
+        "stop_name": "捷運市政府站",
+        "stop_id": "1107100120",
+        "latitude": 25.041057,
+        "longitude": 121.5653493
+      }
+    }
+  ]
+}
