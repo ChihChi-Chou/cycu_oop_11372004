@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: cycu11372004
+Version: 25.5.6
+Summary: A short description of the cycu11372004 package
+Author-email: Chih-Chi Chou <chi20020314@gmail.com>
+License: MIT
+Project-URL: Homepage, https://your-homepage-url.com
+Project-URL: Source, https://github.com/your-username/your-repo
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4==4.13.4
+Requires-Dist: branca==0.8.1
+Requires-Dist: bs4==0.0.2
+Requires-Dist: certifi==2025.4.26
+Requires-Dist: charset-normalizer==3.4.2
+Requires-Dist: contourpy==1.3.2
+Requires-Dist: cycler==0.12.1
+Requires-Dist: folium==0.19.5
+Requires-Dist: fonttools==4.58.0
+Requires-Dist: geopandas==1.0.1
+Requires-Dist: greenlet==3.2.2
+Requires-Dist: idna==3.10
+Requires-Dist: Jinja2==3.1.6
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: matplotlib==3.10.3
+Requires-Dist: numpy==2.2.5
+Requires-Dist: packaging==25.0
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pillow==11.2.1
+Requires-Dist: playwright==1.52.0
+Requires-Dist: pyee==13.0.0
+Requires-Dist: pyogrio==0.11.0
+Requires-Dist: pyparsing==3.2.3
+Requires-Dist: pyproj==3.7.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2025.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: shapely==2.1.0
+Requires-Dist: six==1.17.0
+Requires-Dist: soupsieve==2.7
+Requires-Dist: SQLAlchemy==2.0.40
+Requires-Dist: typing_extensions==4.13.2
+Requires-Dist: tzdata==2025.2
+Requires-Dist: urllib3==2.4.0
+Requires-Dist: xyzservices==2025.4.0

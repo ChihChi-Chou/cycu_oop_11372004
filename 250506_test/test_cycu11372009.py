@@ -1,6 +1,6 @@
-from cycu11372009.hello import hello
+#from cycu11372009.hello import hello
 
-a = hello()
+#a = hello()
 
-print(a)
+#print(a)
 
