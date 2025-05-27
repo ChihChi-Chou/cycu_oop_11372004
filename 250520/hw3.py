@@ -81,7 +81,7 @@ async def find_bus_and_plot(route_id: str):
     filtered_gdf = filtered_gdf.dropna(subset=['geometry'])
 
     # 繪製地圖
-    fig, ax = plt.subplots(figsize=(18, 18))
+    fig, ax = plt.subplots(figsize=(12, 12))
     filtered_gdf.plot(ax=ax, color="lightgray", edgecolor="black")  # 灰色填充，黑色邊界
     bus_route.plot(ax=ax, color="red", linewidth=2)  # 公車路線
 
