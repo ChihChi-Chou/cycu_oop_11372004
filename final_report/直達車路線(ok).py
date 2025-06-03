@@ -5,8 +5,8 @@ import folium
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 
-CSV_PATH = r"C:\Users\USER\Desktop\cycu_oop_11372004\250527\all_bus_stops_by_route.csv"
-ROUTE_MAP_CSV = r"C:\Users\USER\Desktop\cycu_oop_11372004\final_report\taipei_bus_routes.csv"
+CSV_PATH = r"C:\Users\User\Desktop\cycu_oop_11372004\final_report\all_bus_stops_by_route.csv"
+ROUTE_MAP_CSV = r"C:\Users\User\Desktop\cycu_oop_11372004\final_report\taipei_bus_routes.csv"
 
 def list_stop_options_by_name(stop_name):
     unique_ids = set()
@@ -100,57 +100,63 @@ async def get_bus_route_stops(route_id: str) -> dict:
 
 def plot_combined_segment_map(route_id, route_data, start_name, dest_name, output_path):
     m = folium.Map(location=[25.0330, 121.5654], zoom_start=13)
-    color_map = {"去程": "red", "返程": "blue"}
+    segment_color = "orange"
+
+    valid_direction = None
+    all_stops = []
 
     for direction in ["去程", "返程"]:
         stops = route_data.get(direction, [])
-        color = color_map[direction]
-
         try:
             idx_start = next(i for i, stop in enumerate(stops) if stop["站名"] == start_name)
             idx_end = next(i for i, stop in enumerate(stops) if stop["站名"] == dest_name)
+            if idx_start <= idx_end:
+                valid_direction = direction
+                all_stops = stops
+                break
         except StopIteration:
-            print(f"⚠️ 無法在 {direction} 中找到起點或終點，略過此方向。")
             continue
 
-        segment = stops[idx_start:idx_end + 1] if idx_start <= idx_end else stops[idx_end:idx_start + 1][::-1]
+    if not valid_direction:
+        print("⚠️ 無法在任一方向中找到符合順序的起點與終點，無法繪圖。")
+        return
 
-        coords = []
-        for i, stop in enumerate(segment, start=1):
-            coords.append((stop["lat"], stop["lon"]))
-            folium.CircleMarker(
-                location=[stop["lat"], stop["lon"]],
-                radius=10,
-                color=color,
-                fill=True,
-                fill_color=color,
-                fill_opacity=0.6
-            ).add_child(folium.Popup(f'{direction}：{stop["站名"]}')).add_to(m)
+    coords_all = []
+    for i, stop in enumerate(all_stops, start=1):
+        coords_all.append((stop["lat"], stop["lon"]))
+        folium.CircleMarker(
+            location=(stop["lat"], stop["lon"]),
+            radius=8,
+            color=segment_color,
+            fill=True,
+            fill_color=segment_color,
+            fill_opacity=0.7
+        ).add_child(folium.Popup(f'{valid_direction}：{stop["站名"]}')).add_to(m)
 
-            folium.map.Marker(
-                [stop["lat"], stop["lon"]],
-                icon=folium.DivIcon(html=f"""<div style="font-size:10pt; color:white;
-                    background:{color}; border-radius:50%; width:18px; height:18px;
-                    text-align:center; line-height:18px;">{i}</div>""")
+        folium.map.Marker(
+            [stop["lat"], stop["lon"]],
+            icon=folium.DivIcon(html=f"""<div style="font-size:10pt; color:white;
+                background:{segment_color}; border-radius:50%; width:18px; height:18px;
+                text-align:center; line-height:18px;">{i}</div>""")
+        ).add_to(m)
+
+    # 畫整條路線（實線）
+    folium.PolyLine(coords_all, color=segment_color, weight=4, opacity=0.9).add_to(m)
+
+    # 起訖點圖示
+    for stop in all_stops:
+        if stop["站名"] == start_name:
+            folium.Marker(
+                location=[stop['lat'], stop['lon']],
+                popup=f"起點站：{stop['站名']}",
+                icon=folium.Icon(color="green", icon="play")
             ).add_to(m)
-
-        folium.PolyLine(coords, color=color, weight=4, opacity=0.7).add_to(m)
-
-    # 起訖點
-    for stops in route_data.values():
-        for stop in stops:
-            if stop["站名"] == start_name:
-                folium.Marker(
-                    location=[stop['lat'], stop['lon']],
-                    popup=f"起點站：{stop['站名']}",
-                    icon=folium.Icon(color="green", icon="play")
-                ).add_to(m)
-            if stop["站名"] == dest_name:
-                folium.Marker(
-                    location=[stop['lat'], stop['lon']],
-                    popup=f"終點站：{stop['站名']}",
-                    icon=folium.Icon(color="orange", icon="flag")
-                ).add_to(m)
+        if stop["站名"] == dest_name:
+            folium.Marker(
+                location=[stop['lat'], stop['lon']],
+                popup=f"終點站：{stop['站名']}",
+                icon=folium.Icon(color="darkred", icon="flag")
+            ).add_to(m)
 
     m.save(output_path)
     return output_path
@@ -179,7 +185,7 @@ async def find_direct_bus():
             route_code = route_map.get(route, "（查無代碼）")
             print(f"{route} → 公車代碼：{route_code}")
 
-        if input("\n是否繪製雙向路線段圖？（y/n）：").strip().lower() == "y":
+        if input("\n是否繪製路線段圖？（y/n）：").strip().lower() == "y":
             for route in common_routes:
                 print(f"\n🚌 正在處理路線：{route} ...")
                 route_id = route_map.get(route)
@@ -188,7 +194,7 @@ async def find_direct_bus():
                     continue
 
                 route_data = await get_bus_route_stops(route_id)
-                map_file = os.path.join(os.path.expanduser("~"), "Desktop", f"直達公車_{route}_雙向區段圖.html")
+                map_file = os.path.join(os.path.expanduser("~"), "Desktop", f"直達公車_{route}_區段圖.html")
                 plot_combined_segment_map(route_id, route_data, start_name, dest_name, map_file)
                 print(f"✅ 地圖已儲存至：{map_file}")
     else:
