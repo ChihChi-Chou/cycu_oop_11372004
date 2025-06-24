@@ -1,0 +1,2 @@
+include README.md
+include bus_stops_with_lat_lon.csv
